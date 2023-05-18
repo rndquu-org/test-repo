@@ -1,6 +1,6 @@
 chain-id: 100
 private-key-encrypted: "hiECD1d2Ru71dlctDEraD7gppZcZkisovxEBjQ8kRmBiG1EJEpvrD3T1bB5fiZWNxebshYXAoA"
-base-multiplier: 1000
+base-multiplier: 10
 time-labels:
   - name: "Time: <1 Hour"
     weight: 0.125
