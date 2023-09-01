@@ -12,5 +12,5 @@ priority-labels:
   - name: "Priority: 5 (Emergency)"
 assistive-pricing: true
 enable-access-control:
-  label: true
-  organization: true
+  label: false
+  organization: false
