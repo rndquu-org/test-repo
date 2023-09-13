@@ -40,6 +40,8 @@ command-settings:
     enabled: true
   - name: payout
     enabled: true
+  - name: ask
+    enabled: true
 disable-analytics: false
 enable-access-control:
   label: true
