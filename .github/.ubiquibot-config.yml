@@ -10,4 +10,4 @@ plugins:
       - plugin: http://127.0.0.1:9090
         type: github
         with:
-          response: test
+          response: world
