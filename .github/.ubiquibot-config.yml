@@ -1,2 +1,6 @@
-# hello-world-plugin
-- plugin: http://127.0.0.1:9090
+plugins:
+  'issue_comment.created':
+    - skipBotEvents: true
+      uses:
+      # hello-world-plugin
+      - plugin: http://127.0.0.1:9090
