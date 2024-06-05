@@ -4,3 +4,4 @@ plugins:
       uses:
       # hello-world-plugin
       - plugin: http://127.0.0.1:9090
+        type: github
