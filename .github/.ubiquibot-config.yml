@@ -1,7 +1,7 @@
 plugins:
   issues.labeled:
     - uses:
-        - plugin: ubiquibot/user-activity-watcher:compute.yml@pull/1
+        - plugin: rndquu/user-activity-watcher:compute.yml@pull/1
           type: github
           with:
             unassignUserThreshold: 5
