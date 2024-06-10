@@ -1,7 +1,7 @@
 plugins:
   issue_comment.created:
     - uses:
-        - plugin: ubiquibot/user-activity-watcher
+        - plugin: http://localhost:4000
           type: github
           with:
             unassignUserThreshold: 5
