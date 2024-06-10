@@ -1,5 +1,5 @@
 plugins:
-  issue_comment.created:
+  issues.labeled:
     - uses:
         - plugin: ubiquibot/user-activity-watcher:compute.yml@pull/1
           type: github
