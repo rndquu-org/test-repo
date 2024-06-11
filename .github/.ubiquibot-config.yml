@@ -1,5 +1,5 @@
 plugins:
-  issues.labeled:
+  issue_comment.created:
     - uses:
         - plugin: http://localhost:4000 # or the URL where the plugin is hosted
           name: start-stop
