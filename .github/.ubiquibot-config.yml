@@ -1,17 +1,8 @@
 plugins:
-  issue_comment.created:
+  issues.labeled:
     - uses:
-        - plugin: http://localhost:4000
-          name: start-stop
-          id: start-stop-command
+        - plugin: rndquu/user-activity-watcher
           type: github
-          description: "Allows a user to start/stop a bounty without negative XP impact"
-          command: "/(start|stop)"
-          example: "/start | /stop"
           with:
-            disabledCommands: []
-            timers:
-              reviewDelayTolerance: 86000
-              taskStaleTimeoutDuration: 2580000
-            miscellaneous:
-              maxConcurrentTasks: 3
+            unassignUserThreshold: 5
+            sendRemindersThreshold: 1
