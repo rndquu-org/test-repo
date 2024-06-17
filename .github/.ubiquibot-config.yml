@@ -1,7 +1,7 @@
 plugins:
   issues.closed:
     - uses:
-        - plugin: rndquu/conversation-rewards:compute.yml@feat/custom-erc20-reward
+        - plugin: rndquu/conversation-rewards:compute.yml@pull/32
           with:
               evmNetworkId: 100
               evmPrivateEncrypted: "encrypted-key"
