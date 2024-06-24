@@ -14,4 +14,4 @@ plugins:
               taskStaleTimeoutDuration: 2580000
             miscellaneous:
               maxConcurrentTasks: 3
-              startRequiresWallet: true
+              startRequiresWallet: false
