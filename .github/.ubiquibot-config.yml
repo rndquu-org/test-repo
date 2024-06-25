@@ -1,17 +1,9 @@
 plugins:
   issue_comment.created:
     - uses:
-        - plugin: http://localhost:4000 # or the URL where the plugin is hosted
-          name: start-stop
-          id: start-stop-command
-          description: "Allows a user to start/stop a bounty without negative XP impact"
-          command: "/(start|stop)"
-          example: "/start | /stop"
-          with:
-            disabledCommands: []
-            timers:
-              reviewDelayTolerance: 86000
-              taskStaleTimeoutDuration: 2580000
-            miscellaneous:
-              maxConcurrentTasks: 3
-              startRequiresWallet: false
+        - plugin: http://localhost:4000
+          name: command-wallet
+          id: command-wallet
+          description: "Helps users setting their wallet to collect subsequent task rewards."
+          command: "/wallet"
+          example: "/wallet ubiquibot.eth"
