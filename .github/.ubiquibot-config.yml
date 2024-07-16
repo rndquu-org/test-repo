@@ -7,7 +7,7 @@ plugins:
           description: "Automatically merge pull-requests."
           with:
             approvalsRequired:
-              collaborator: 0
+              collaborator: 1
               contributor: 2
             mergeTimeout:
               collaborator: "5 minutes"
