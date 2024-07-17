@@ -1,7 +1,7 @@
 plugins:
   issue_comment.created:
     - uses:
-        - plugin: rndquu/automated-merging
+        - plugin: rndquu/automated-merging:compute.yml@pull/1
           name: automated-merging
           id: automated-merging
           description: "Automatically merge pull-requests."
