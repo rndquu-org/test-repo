@@ -1,14 +1,13 @@
 plugins:
-  issue_comment.created:
-    - uses:
-        - plugin: rndquu/automated-merging:compute.yml@pull/1
-          name: automated-merging
-          id: automated-merging
-          description: "Automatically merge pull-requests."
-          with:
-            approvalsRequired:
-              collaborator: 1
-              contributor: 2
-            mergeTimeout:
-              collaborator: "5 minutes"
-              contributor: "7 days"
+  'issue_comment.created':
+    - name: "hello-world-plugin name"
+      description: "hello-world-plugin description"
+      command: "/hello"
+      example: "/hello example"
+      skipBotEvents: true
+      uses:
+      # hello-world-plugin
+      - plugin: http://127.0.0.1:9090
+        type: github
+        with:
+          response: world
