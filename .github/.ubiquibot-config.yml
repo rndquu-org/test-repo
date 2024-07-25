@@ -8,7 +8,7 @@ plugins:
           with:
             approvalsRequired:
               collaborator: 1
-              contributor: 2
+              contributor: 1
             mergeTimeout:
               collaborator: "5 minutes"
-              contributor: "7 days"
+              contributor: "5 minutes"
