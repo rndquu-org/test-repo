@@ -10,5 +10,5 @@ plugins:
               collaborator: 1
               contributor: 1
             mergeTimeout:
-              collaborator: "5 minutes"
-              contributor: "5 minutes"
+              collaborator: "1 minute"
+              contributor: "1 minute"
