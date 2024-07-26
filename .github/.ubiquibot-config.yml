@@ -1,14 +1,82 @@
 plugins:
-  issue_comment.created:
+  issues.closed:
     - uses:
-        - plugin: rndquu/automated-merging:compute.yml@pull/1
-          name: automated-merging
-          id: automated-merging
-          description: "Automatically merge pull-requests."
-          with:
-            approvalsRequired:
-              collaborator: 1
-              contributor: 1
-            mergeTimeout:
-              collaborator: "1 minute"
-              contributor: "1 minute"
+      - plugin: rndquu/conversation-rewards@pull/68
+        with:
+          evmNetworkId: 100
+          evmPrivateEncrypted: "wOzNgt-yKT6oFlOVz5wrBLUSYxAbKGE9Co-yvT8f9lePsx7wJwPVugS9186zdhr1T4UpkpXvq9ii5M-nWfrydMnllSkowH4LirRZsHbvRVSvDoH_uh80p6HpwqDSG3g4Nwx5q0GD3H-ne4vwXMuwWAHd"
+          erc20RewardToken: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d"
+          dataCollection:
+            maxAttempts: 10
+            delayMs: 10000
+          incentives:
+            requirePriceLabel: true
+            contentEvaluator:
+            userExtractor:
+              redeemTask: true
+            dataPurge:
+            formattingEvaluator:
+              scores:
+                br: 0
+                code: 1
+                p: 1
+                em: 0
+                img: 0
+                strong: 0
+                blockquote: 0
+                h1: 1
+                h2: 1
+                h3: 1
+                h4: 1
+                h5: 1
+                h6: 1
+                a: 1
+                li: 1
+                td: 1
+                hr: 0
+              multipliers:
+                - select: [ ISSUE_SPECIFICATION ]
+                  formattingMultiplier: 1
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ ISSUE_AUTHOR ]
+                  formattingMultiplier: 1
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ ISSUE_ASSIGNEE ]
+                  formattingMultiplier: 0
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ ISSUE_COLLABORATOR ]
+                  formattingMultiplier: 1
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ ISSUE_CONTRIBUTOR ]
+                  formattingMultiplier: 0.25
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ PULL_SPECIFICATION ]
+                  formattingMultiplier: 0
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ PULL_AUTHOR ]
+                  formattingMultiplier: 2
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ PULL_ASSIGNEE ]
+                  formattingMultiplier: 1
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ PULL_COLLABORATOR ]
+                  formattingMultiplier: 1
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+                - select: [ PULL_CONTRIBUTOR ]
+                  formattingMultiplier: 0.25
+                  symbols:
+                    "\\b\\w+\\b": 0.1
+            permitGeneration:
+              enabled: true
+            githubComment:
+              post: true
+              debug: false
