@@ -10,6 +10,7 @@ plugins:
             maxAttempts: 10
             delayMs: 10000
           incentives:
+            enabled: true
             requirePriceLabel: true
             contentEvaluator:
             userExtractor:
