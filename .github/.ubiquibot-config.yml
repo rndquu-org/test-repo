@@ -18,7 +18,7 @@ plugins:
             formattingEvaluator:
               multipliers:
                 - select: [ ISSUE_SPECIFICATION ]
-                  formattingMultiplier: 1
+                  formattingMultiplier: 2
                   symbols:
                     "\\b\\w+\\b": 0.1
                   scores: # Scores can be set for each item differently
