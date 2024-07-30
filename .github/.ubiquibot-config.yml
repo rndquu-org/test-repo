@@ -5,24 +5,23 @@ plugins:
         with:
           evmNetworkId: 100
           evmPrivateEncrypted: "wOzNgt-yKT6oFlOVz5wrBLUSYxAbKGE9Co-yvT8f9lePsx7wJwPVugS9186zdhr1T4UpkpXvq9ii5M-nWfrydMnllSkowH4LirRZsHbvRVSvDoH_uh80p6HpwqDSG3g4Nwx5q0GD3H-ne4vwXMuwWAHd"
+          erc20RewardToken: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d"
+          dataCollection:
+            maxAttempts: 10
+            delayMs: 10000
           incentives:
-            enabled: true
+            requirePriceLabel: true
             contentEvaluator:
-              enabled: true
             userExtractor:
-              enabled: true
               redeemTask: true
             dataPurge:
-              enabled: true
             formattingEvaluator:
-              enabled: true
               multipliers:
                 - select: [ ISSUE_SPECIFICATION ]
                   formattingMultiplier: 1
                   symbols:
                     "\\b\\w+\\b": 0.1
-                    "\\b\\W+\\b": 0.1
-                  scores:
+                  scores: # Scores can be set for each item differently
                     br: 0
                     code: 1
                     p: 1
@@ -77,8 +76,7 @@ plugins:
                   symbols:
                     "\\b\\w+\\b": 0.1
             permitGeneration:
-              enabled: false
-            githubComment:
               enabled: true
+            githubComment:
               post: true
               debug: false
