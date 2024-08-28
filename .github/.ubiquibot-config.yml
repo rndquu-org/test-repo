@@ -12,3 +12,4 @@ plugins:
           taskStaleTimeoutDuration: "30 Days"
           maxConcurrentTasks: 3
           startRequiresWallet: false # default is true
+          emptyWalletText: "Register via /wallet pls"
