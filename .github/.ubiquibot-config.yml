@@ -8,7 +8,7 @@ plugins:
           erc20RewardToken: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d"
           incentives:
             contentEvaluator:
-              enabled: true
+              enabled: false
             userExtractor:
               enabled: true
               redeemTask: true
