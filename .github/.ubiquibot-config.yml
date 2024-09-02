@@ -13,7 +13,7 @@ plugins:
             requirePriceLabel: true
             contentEvaluator:
               openAi:
-                model: "gpt-4o"
+                model: "gpt-4o-mini"
                 endpoint: "https://api.openai.com/v1"
               multipliers:
                 - role: [ISSUE_SPECIFICATION]
