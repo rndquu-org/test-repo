@@ -10,7 +10,7 @@ plugins:
           xpTiers:
             Junior: 10                     # Percentage threshold for qualificationm, e.g., 10% of total languages
           statThresholds:
-            stars: 10                      # Minimum stars required
+            stars: 2                      # Minimum stars required
             prs: 5                         # Minimum PRs required
             issues: 5                      # Minimum issues required
             commits: 5                     # Minimum commits required
