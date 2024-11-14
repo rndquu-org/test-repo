@@ -1,7 +1,11 @@
 plugins:
-  - skipBotEvents: true
-    uses:
+  - uses:
       - plugin: http://127.0.0.1:9090
         runsOn: [ "issue_comment.created" ]
         with:
           response: world
+  - uses:
+      - plugin: http://127.0.0.1:9091
+        runsOn: [ "issue_comment.created" ]
+        with:
+          response: world2
