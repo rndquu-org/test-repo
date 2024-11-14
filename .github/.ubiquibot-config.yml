@@ -1,16 +1,8 @@
 plugins:
-  issues.assigned:
-    - uses:
-      - plugin: http://localhost:4000
+  - skipBotEvents: true
+    uses:
+    	# hello-world-plugin
+      - plugin: http://127.0.0.1:9090
+        runsOn: [ "issue_comment.created" ]
         with:
-          enableChecksForOrgMembers: true # Set to true to bypass checks for organization members
-          minAccountAgeInDays: 365         # Minimum account age required to qualify for task assignments
-          labelFilters:
-            - Solidity                     # Labels used to identify protected tasks
-          xpTiers:
-            Junior: 10                     # Percentage threshold for qualificationm, e.g., 10% of total languages
-          statThresholds:
-            stars: 2                      # Minimum stars required
-            prs: 5                         # Minimum PRs required
-            issues: 5                      # Minimum issues required
-            commits: 5                     # Minimum commits required
+          response: world
