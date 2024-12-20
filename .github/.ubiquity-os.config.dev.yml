@@ -1,17 +1,3 @@
 plugins:
   - uses:
-      - plugin: http://localhost:4000 # or the URL where the plugin is hosted
-        with:
-          reviewDelayTolerance: "3 Days"
-          taskStaleTimeoutDuration: "30 Days"
-          startRequiresWallet: true
-          maxConcurrentTasks:
-            member: 2
-            contributor: 2
-          emptyWalletText: "Please set your wallet address with the /wallet command first and try again."
-          rolesWithReviewAuthority:
-            - COLLABORATOR
-            - OWNER
-            - MEMBER
-            - ADMIN
-          requiredLabelsToStart: ["Priority: 3 (High)", "Priority: 4 (Urgent)", "Priority: 5 (Emergency)"]
+      - plugin: http://localhost:4000 # or the URL where the plugin is hoste
