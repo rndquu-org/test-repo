@@ -17,3 +17,7 @@ plugins:
             - MEMBER
             - COLLABORATOR
           requiredLabelsToStart: []
+  - uses:
+      - plugin: https://ubiquity-os-command-wallet-development.ubiquity.workers.dev
+        with:
+          registerWalletWithVerification: false
